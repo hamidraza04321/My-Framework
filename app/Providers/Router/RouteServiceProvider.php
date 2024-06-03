@@ -4,19 +4,8 @@ namespace App\Providers\Router;
 
 class RouteServiceProvider
 {
-	/**
-	 * @var routes
-	 */
 	public $routes;
-
-	/**
-	 * @var url
-	 */
 	public $url;
-
-	/**
-	 * @var method
-	 */
 	public $method;
 
 	public function __construct($routes)

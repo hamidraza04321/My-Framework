@@ -33,18 +33,18 @@ class FileContentProvider
 	 */
 	public function model($fileName)
 	{
-		$fileNameLowercase = strtolower($fileName) . 's';
+		// $fileNameLowercase = strtolower($fileName) . 's';
 
 		return <<<Content
 		<?php
 
 		namespace App\Models;
 
-		class {$fileName}
+		use App\Providers\ModelServiceProvider as Model;
+
+		class $fileName extends Model
 		{
-			protected \$table = "$fileNameLowercase";
-			protected \$fillable = [];
-			protected \$guarded = [ 'id', 'created_at', 'updated_at' ];
+			//
 		}
 		Content;
 	}

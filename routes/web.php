@@ -16,7 +16,7 @@ use App\Providers\Router\RouteServiceProvider;
 
 Route::get('/', [ App\Http\Controller\HomeController::class, 'index' ]);
 Route::get('/users', [ App\Http\Controller\UserController::class, 'index' ]);
-Route::post('/hamid', [ App\Http\Controller\UserController::class, '' ]);
+Route::get('/employee', [ App\Http\Controller\EmployeeController::class, 'index' ]);
 
 $collection = Route::collection();
 new RouteServiceProvider($collection);

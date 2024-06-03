@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
-class User
+use App\Providers\ModelServiceProvider as Model;
+
+class User extends Model
 {
-	protected $table = "users";
-	protected $fillable = [];
-	protected $guarded = [ 'id', 'created_at', 'updated_at' ];
+	//
 }
